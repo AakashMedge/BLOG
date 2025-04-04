@@ -76,6 +76,11 @@ app.delete("/posts/:id", (req,res) => {
     res.redirect("/posts");
 })
 
+app.get('/', (req, res) => {
+    res.send('Welcome to SkyBlog!');
+  });
+  
+
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
 });
