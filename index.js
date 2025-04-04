@@ -48,6 +48,11 @@ app.post("/posts", (req, res) => {
     res.redirect("/posts");
 });
 
+// Update just this route (line ~50 in your file)
+app.get('/', (req, res) => {
+    res.render('welcome.ejs');
+});
+
 app.get("/posts/:id", (req, res) => {
     let {id} = req.params;
     console.log(id);
